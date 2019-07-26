@@ -2,8 +2,8 @@ Symfony best practices:
 ====
 
 ## Installation:
-..* Use composer and Symfony flex
-..* Symfony flex used to automated some tasks used in symfony
+* Use composer and Symfony flex
+* Symfony flex used to automated some tasks used in symfony
 
 
 ## Configuration:
