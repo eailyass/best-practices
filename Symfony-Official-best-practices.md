@@ -8,8 +8,8 @@ Symfony best practices:
 
 ## Configuration:
 * .env:
-		- Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
-		- déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
+- Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
+- déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
 * services.yml:
 
 		Les configurations liées à l'application
