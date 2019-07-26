@@ -1,21 +1,21 @@
-The components:
+## The components:
 
-	Asset: 
+### Asset: 
 		- gère la génération des URL et le versionning des web assets (CSS, JS, Images...)
 		- Plusieurs stratégies de versionnage: emptyVersionStrategy = pas de version, staticVersionStrategy= version avec prefix (v1, v2...), JsonManifestVersionStrategy = version gérée par un fichier JSON
 
-	BrowserKit:
+### BrowserKit:
 		- Permet la simulation d'un navigateur, la soumission automatique des formulaires... pour effectuer des tests fonctionnels
 		- 
 
-	Cache component:
+### Cache component:
 		- gère les besoins en cache respecte PSR-6 et cache contracts
 
 
 
 
 
-Architecture (3.4):
+## Architecture (3.4):
 
 
 App: appkernel.php  / Config

@@ -1,12 +1,12 @@
 # Global cheatsheet
 
 
-##MySQL:
+## MySQL:
 	login command: mysql -u username -p
 	know variables (port, host, charset...): show variables  (after login)
 
 
-##Doctrine:
+## Doctrine:
 	Generate database : doctrine:create:database
 	créer entité: make:entity
 	créer migration: make:migration

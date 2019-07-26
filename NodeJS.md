@@ -3,36 +3,36 @@ module.exports.say=
 debug filename.js
 
 
-#appeler un module
+## appeler un module
 
 var fs = require("fs");
-#installer package
+## installer package
 
 npm install connect
 
-# si on dispose d'un fichier package.json
+## si on dispose d'un fichier package.json
 
 npm install // installe ts les dependencies de package.json
 On peut créer le fichier package.json à partir de la commande "npm init"
 
 
 
-Modules:
+## Modules:
 
 	http : envoyer/recevoir des requêtes http
 	url : l'url client
 	querystring : renvoyer un tableau de paramètres issues de l'url (les paramètres GET)
 	events : gérer les événements
 
-	# créer un module:
+	### créer un module:
 		simple fichier .js à inclure en chemin relatif : require('./monModule') ou bien mettre dans le sous-dossier node_modules et l'appler require('monModule').
 		Pour utiliser les fonctions au sein des modules créés il faut les exporter via la commande exports: exports.nomMethode
 
-	#ExpressJS
+	### ExpressJS
 	module implémentant des fonctionnalités de base pour notre serveur (gestion de routes)
 
 
-Evenements:
+## Evenements:
 	Ecouter des événements:
 		Objet.on('eventName', function(params){})
 	Emettre des événements:
@@ -45,9 +45,9 @@ Evenements:
 
 
 
-Gulp:
+## Gulp:
 
-	#Fonctions de base:
+	### Fonctions de base:
 		gulp.task('nomDeLaTache', function () {
 		  return gulp.src(ici-ma-source)
 		    /* ici les plugins Gulp à exécuter */
@@ -56,7 +56,7 @@ Gulp:
 
 		gulp.task('watch', function)
 		
-	# modules les plus utilisés pour CSS
+	### modules les plus utilisés pour CSS
 		less : consolider les fichiers .less dans le même css
 		csscomb : réordonner les priorités
 		cssbeautify : linter et indenter
