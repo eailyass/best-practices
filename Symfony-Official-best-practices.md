@@ -2,15 +2,15 @@ Symfony best practices:
 ====
 
 ## Installation:
-	* Use composer and Symfony flex
-	* Symfony flex used to automated some tasks used in symfony
+..* Use composer and Symfony flex
+..* Symfony flex used to automated some tasks used in symfony
 
 
 ## Configuration:
-	* .env:
+..* .env:
 		** Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
 		** déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
-	* services.yml:
+	..* services.yml:
 
 		Les configurations liées à l'application
 		Si une valeur reste toujours constante, vaut mieux la déclarer en tant que "const" dans une classe que la déclarer dans le fichier services.
@@ -49,8 +49,8 @@ Symfony best practices:
     locale:     en
 
 ## Components:
-	1. install: composer require symfony/extName
-	2. ###validator component
+1. install: composer require symfony/extName
+	2. validator component
     3. LDAP component
 	4. Console component:
 	 	Create a command under symfony:
@@ -77,9 +77,9 @@ Symfony best practices:
 
 #API:
 ##Serializer:
-	* JMSSerialiser
-	* Resonse::HTTP_NOT_FOUND
-	* LexikJWTAUthentificator
+	..* JMSSerialiser
+	..* Resonse::HTTP_NOT_FOUND
+	..* LexikJWTAUthentificator
 
 	FOSRESTBundle:
 
