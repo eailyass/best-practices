@@ -20,9 +20,9 @@ Symfony best practices:
 
 
 ## Services: (avant symfoy "3.3")
-	service container
-	il suffit de créer un objet ds le dossier services pr qu'il soit accessible.
-	si l'objet necessite des variables pour la construction, elles doivent être déclarées dans le fichier services.yml
+service container
+il suffit de créer un objet ds le dossier services pr qu'il soit accessible.
+si l'objet necessite des variables pour la construction, elles doivent être déclarées dans le fichier services.yml
 
 ## Controllers (version 4):
 	symfony suit la règle de "thin controllers" "fat models" ===> les controleurs doivent contenir le juste nécessaire
