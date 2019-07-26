@@ -1,4 +1,4 @@
-#Global cheatsheet
+# Global cheatsheet
 
 
 ##MySQL:
