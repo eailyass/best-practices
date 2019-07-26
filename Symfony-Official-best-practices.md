@@ -7,10 +7,10 @@ Symfony best practices:
 
 
 ## Configuration:
-..* .env:
-		** Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
-		** déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
-	..* services.yml:
+* .env:
+		- Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
+		- déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
+* services.yml:
 
 		Les configurations liées à l'application
 		Si une valeur reste toujours constante, vaut mieux la déclarer en tant que "const" dans une classe que la déclarer dans le fichier services.
