@@ -1,12 +1,12 @@
 Symfony best practices:
 ====
 
-##Installation:
+## Installation:
 	* Use composer and Symfony flex
 	* Symfony flex used to automated some tasks used in symfony
 
 
-##Configuration:
+## Configuration:
 	* .env:
 		** Contient les informations d'environnement qui ne sont pas liées à l'application (base de donnée...)
 		** déclaration de la Bdd: DATABASE_URL="mysql://username:pwd@127.0.0.1:3306/db_name"
@@ -18,37 +18,37 @@ Symfony best practices:
 		si l'objet necessite des variables pour la construction, elles ne doivent plus être déclarées dans le dossier services.yml comme arguments, mais peuvent directement être déclrées dans le constructeur et "type-hinted", l'autowiring s'occupe du reste.
 
 
-##Services: (avant symfoy "3.3")
+## Services: (avant symfoy "3.3")
 	service container
 	il suffit de créer un objet ds le dossier services pr qu'il soit accessible.
 	si l'objet necessite des variables pour la construction, elles doivent être déclarées dans le fichier services.yml
 
-##Controllers (version 4):
+## Controllers (version 4):
 	symfony suit la règle de "thin controllers" "fat models" ===> les controleurs doivent contenir le juste nécessaire
 	le suffixe "action" n'est plus recommandé
 	Les routes sont déclarées en tant qu'annotations (déclarer type:annotation dans le fichier config/routes.yml)
 
-##Templates (version 4):
+## Templates (version 4):
 
 	Dossier /templates
 	tous les fichiers twig sont desormais centralisés dans ce même dossier pour simplifier la tache 
 	lowercase snake_cased names pour les fichiers twig
 	Les extensions twig sont des classes php qui étendent la classe Twig\Extension\AbstractExtension et qui sont déclarées dans le dossier /src/Twig  ils servent à ajouter de nouveaux filtres et fonctionnalités à twig
 
-##security symfony:
+## security symfony:
  	security.yaml => use bcrypt instead of sha-512
  	use @security annotation
  	providers: 
  	firewalls:
 
-##Translation:
+## Translation:
  app/config/config.yml
   translator: { fallbacks: ['%locale%'] }
   app/config/parameters.yml
   	parameters:
     locale:     en
 
-##Components:
+## Components:
 	1. install: composer require symfony/extName
 	2. ###validator component
     3. LDAP component
@@ -63,14 +63,14 @@ Symfony best practices:
 	 		- Response
 	 		- Cache management
 
-##Controllers:
+## Controllers:
 	Thin controller fat model
 	use paramconverter 
 
-##Service container:
+## Service container:
 	$container->get('service_id')
 	Lazy loading
-##Doctrine:
+## Doctrine:
 	Lazy loading	
 
 
