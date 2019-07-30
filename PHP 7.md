@@ -89,6 +89,34 @@ echo $classname::CONST_VALUE;
 
 permettent de créer du code qui spécifie quelles méthodes une classe doit implémenter, sans avoir à définir comment ces méthodes fonctionneront.
 
+### Les Traits
+
+Un trait tente de réduire certaines limites de l'héritage simple.
+Un trait est semblable à une classe, mais il ne sert qu'à grouper des fonctionnalités d'une manière intéressante. Il n'est pas possible d'instancier un Trait en lui-même. Il permet l'utilisation de méthodes de classe sans besoin d'héritage.
+* Précédence:
+  * Une méthode héritée depuis une classe mère est écrasée par une méthode issue d'un Trait.
+  * Les méthodes de la classe courante écrasent les méthodes issues d'un Trait.
+  * ceci veut dire ClasseMere::maMethode() < Trait::maMethode() < ClassFille::maMethode().
+
+Le Trait est invoqué dans une classe via le mot clé _use_
+```php
+
+trait monTrait {
+ public function maFonction(){
+ 	//
+ }
+}
+class maClasse {
+use monTrait;
+//
+}
+
+```
+
+Si deux Traits insèrent une méthode avec le même nom, une erreur fatale est levée si le conflit n'est pas explicitement résolu.
+
+Pour résoudre un conflit de nommage entre des Traits utilisés dans la même classe, il faut utiliser l'opérateur insteadof pour choisir une des méthodes en conflit.
+
 ## Déclarations de types des arguments et de types de retour:
 ### Déclaration de type d'arguments:
 	function maFonction([int,float,string,array,classe..] $maVariable){
