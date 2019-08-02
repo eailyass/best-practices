@@ -78,9 +78,9 @@ Symfony best practices:
 
 # API:
 ## Serializer:
-	..* JMSSerialiser
-	..* Resonse::HTTP_NOT_FOUND
-	..* LexikJWTAUthentificator
+* JMSSerialiser
+* Resonse::HTTP_NOT_FOUND
+* LexikJWTAUthentificator
 
 ## FOSRESTBundle:
 
@@ -88,48 +88,48 @@ Symfony best practices:
 
 #### annotations:
 ```
-						@Rest\post(
-						path= "routePath",
-						name= "routeName",
-						requirements: {}
-						)
-						@Rest\get...
+	@Rest\post(
+	path= "routePath",
+	name= "routeName",
+	requirements: {}
+	)
+	@Rest\get...
 ```
 
 #### Serialisation:
 ```
-			- activer le body_converter
-			- ajouter la config:
-				format_listener:
-				    rules:
-				        - { path: '^/', priorities: ['json'], fallback_format: 'json' }  (permet de définir les paths et le format à utiliser)
+	- activer le body_converter
+	- ajouter la config:
+		format_listener:
+		    rules:
+		        - { path: '^/', priorities: ['json'], fallback_format: 'json' }  (permet de définir les paths et le format à utiliser)
 
-				fos_rest:
-				    view:
-				        view_response_listener: true	(permet de récupérer l'objet retourné et le sérialiser puis envoyer un status code)
+		fos_rest:
+		    view:
+		        view_response_listener: true	(permet de récupérer l'objet retourné et le sérialiser puis envoyer un status code)
 
-			- Ajouter l'annotation @View (
-				statusCode = 201,
-    		    serializerGroups = {"POST_CREATE"}
-     		)
+	- Ajouter l'annotation @View (
+		statusCode = 201,
+	    serializerGroups = {"POST_CREATE"}
+		)
 ```
 
 #### Négociation de contenu:
-     		permet au client de demander le format de données, la lanqgue et le charset de sa requête...
+   permet au client de demander le format de données, la lanqgue et le charset de sa requête...
 
 #### Déserialisation:
 - par paramConverter ou bien par formulaire
   - Cas de paramConverter:
   ```
-     		-Activer le paramConverter et le bodyConverter:
-     			sensio_framework_extra:
-    				request: { converters: true }
-    
-				fos_rest:
-				    body_converter:
-				        enabled: true  (permet la converstion de JSON à un objet)
-			- Ajouter l'annotation @paramConverter
-				@ParamConverter("article", converter="fos_rest.request_body")
+-Activer le paramConverter et le bodyConverter:
+	sensio_framework_extra:
+	request: { converters: true }
+
+fos_rest:
+    body_converter:
+        enabled: true  (permet la converstion de JSON à un objet)
+- Ajouter l'annotation @paramConverter
+@ParamConverter("article", converter="fos_rest.request_body")
 ```
   - Cas de formulaire:
 				
