@@ -76,17 +76,17 @@ Symfony best practices:
 
 
 
-#API:
-##Serializer:
+# API:
+## Serializer:
 	..* JMSSerialiser
 	..* Resonse::HTTP_NOT_FOUND
 	..* LexikJWTAUthentificator
 
-##FOSRESTBundle:
+## FOSRESTBundle:
 
-###Gestion des routes:
+### Gestion des routes:
 
-####annotations:
+#### annotations:
 ```
 						@Rest\post(
 						path= "routePath",
@@ -96,7 +96,7 @@ Symfony best practices:
 						@Rest\get...
 ```
 
-####Serialisation:
+#### Serialisation:
 ```
 			- activer le body_converter
 			- ajouter la config:
@@ -114,10 +114,10 @@ Symfony best practices:
      		)
 ```
 
-####Négociation de contenu:
+#### Négociation de contenu:
      		permet au client de demander le format de données, la lanqgue et le charset de sa requête...
 
-####Déserialisation:
+#### Déserialisation:
 - par paramConverter ou bien par formulaire
   - Cas de paramConverter:
   ```
