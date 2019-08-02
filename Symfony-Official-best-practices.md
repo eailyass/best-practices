@@ -82,20 +82,22 @@ Symfony best practices:
 	..* Resonse::HTTP_NOT_FOUND
 	..* LexikJWTAUthentificator
 
-	FOSRESTBundle:
+##FOSRESTBundle:
 
-		Gestion des routes:
+###Gestion des routes:
 
-			annotations: 
+####annotations:
+```
 						@Rest\post(
 						path= "routePath",
 						name= "routeName",
 						requirements: {}
 						)
 						@Rest\get...
+```
 
-
-		Serialisation:
+####Serialisation:
+```
 			- activer le body_converter
 			- ajouter la config:
 				format_listener:
@@ -110,13 +112,15 @@ Symfony best practices:
 				statusCode = 201,
     		    serializerGroups = {"POST_CREATE"}
      		)
+```
 
-     	Négociation de contenu:
+####Négociation de contenu:
      		permet au client de demander le format de données, la lanqgue et le charset de sa requête...
 
-     	Déserialisation:
-     		-par paramConverter ou bien par formulaire
-     		Cas de paramConverter:
+####Déserialisation:
+- par paramConverter ou bien par formulaire
+  - Cas de paramConverter:
+  ```
      		-Activer le paramConverter et le bodyConverter:
      			sensio_framework_extra:
     				request: { converters: true }
@@ -126,17 +130,18 @@ Symfony best practices:
 				        enabled: true  (permet la converstion de JSON à un objet)
 			- Ajouter l'annotation @paramConverter
 				@ParamConverter("article", converter="fos_rest.request_body")
-			Cas de formulaire:
-				créer forms
-
-		Traitement des requêtes GET et POST:
+```
+  - Cas de formulaire:
+				
+créer forms<br>
+Traitement des requêtes GET et POST:
 			QueryParam pour les GET
 			RequestParam pour les POST
 
 
 
 
-		Symfony 4.1
+Symfony 4.1
 		Monolog
 		Surcouche - startekit: tout api hérite d'une classe
 		Standardisation
