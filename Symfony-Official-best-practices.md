@@ -73,7 +73,11 @@ Symfony best practices:
 	Lazy loading
 ## Doctrine:
 	Lazy loading	
-
+### Fixtures
+créer des fixtures make:fixtures
+executer fixtures doctrine:fixtures:load
+créer des fixtures sans purger la bdd --append
+créer des fixtures pour une classe bien définie --group=NomDeLaFixture 
 
 
 # API:
@@ -95,23 +99,22 @@ Symfony best practices:
 	)
 	@Rest\get...
 ```
-
 #### Serialisation:
 ```
-	- activer le body_converter
-	- ajouter la config:
-		format_listener:
-		    rules:
-		        - { path: '^/', priorities: ['json'], fallback_format: 'json' }  (permet de définir les paths et le format à utiliser)
+- activer le body_converter
+- ajouter la config:
+	format_listener:
+	    rules:
+	        - { path: '^/', priorities: ['json'], fallback_format: 'json' }  (permet de définir les paths et le format à utiliser)
 
-		fos_rest:
-		    view:
-		        view_response_listener: true	(permet de récupérer l'objet retourné et le sérialiser puis envoyer un status code)
+	fos_rest:
+	    view:
+	        view_response_listener: true	(permet de récupérer l'objet retourné et le sérialiser puis envoyer un status code)
 
-	- Ajouter l'annotation @View (
-		statusCode = 201,
-	    serializerGroups = {"POST_CREATE"}
-		)
+- Ajouter l'annotation @View (
+	statusCode = 201,
+    serializerGroups = {"POST_CREATE"}
+	)
 ```
 
 #### Négociation de contenu:
@@ -120,7 +123,8 @@ Symfony best practices:
 #### Déserialisation:
 - par paramConverter ou bien par formulaire
   - Cas de paramConverter:
-  ```
+
+```
 -Activer le paramConverter et le bodyConverter:
 	sensio_framework_extra:
 	request: { converters: true }
@@ -135,8 +139,8 @@ fos_rest:
 				
 créer forms<br>
 Traitement des requêtes GET et POST:
-			QueryParam pour les GET
-			RequestParam pour les POST
+- QueryParam pour les GET
+- RequestParam pour les POST
 
 
 

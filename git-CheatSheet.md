@@ -1,3 +1,7 @@
+## Gestion de la config de base:
+git config --global -l => liste la config
+git config --global user.name "username" => définir l'utilisateur.
+git config --global core.editor code|subl... => définir l'éditeur de texte par défaut.
 ## Commandes de logs:
 
 git log ==> tous les commits
@@ -35,3 +39,6 @@ git revert "commitId" "fileName" ==> annuler le commit dans un fichier particuli
 
 ## Gestion des conflits:
 - Une fois deux développeurs travaillent en local sur le même fichier en même temps (même branche ou branches différents) - un conflit est créé lors du push, il faut le régler manuellement dans le fichier.
+
+## Gestion d'un nouveau projet:
+Un projet est géré selon plusieurs cas de figure
