@@ -7,11 +7,11 @@
 ### Ajouter de la mémoire swap:
 swap est une zone d'un disque dur faisant partie de la mémoire virtuelle. Il est conseillé que la taille du swap soit entre x1 et x2 fois la taille de sa RAM. Dans Ubuntu, swap se trouve généralement sous une forme de partition de disque dur – on parle alors de partition d'échange. Il peut aussi se présenter sous forme de fichier – on parle alors de fichier d'échange. Ce mode est le plus conseillé.
 
-**Créer un fichier swap**: sudo fallocate -l <taille du fichier > <nom du fichier>
-**Attribuer les droits nécessaies**: sudo chmod 600 <nom du fichier>
-**Définir le fichier créé en tant qu'espace swap**: sudo mkswap <nom du fichier>
-**Activer le fichier swap**: sudo swapon <nom du fichier>
-**Rendre le fichier disponible au démarange en ajoutant cette ligne au fichier fstab**: <chemin du fichier> none swap sw 0 0 
+**Créer un fichier swap**: sudo fallocate -l (taille du fichier) (nom du fichier)
+**Attribuer les droits nécessaies**: sudo chmod 600 (nom du fichier)
+**Définir le fichier créé en tant qu'espace swap**: sudo mkswap (nom du fichier)
+**Activer le fichier swap**: sudo swapon (nom du fichier)
+**Rendre le fichier disponible au démarange en ajoutant cette ligne au fichier fstab**: (chemin du fichier) none swap sw 0 0 
 
 ## Gestion du stockage:
 
