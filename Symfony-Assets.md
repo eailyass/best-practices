@@ -12,7 +12,12 @@
 		- gère les besoins en cache respecte PSR-6 et cache contracts
 
 
+## Gestion des utilisateurs sur symfony 4:
+### Classe user:
+Le maker bundle et les mises à jour du security component ont conduit à un changement de la manière de gérer l'authentification de l'utilisateur. Il est possible d'utiliser le fameux FOSUserBundle, mais il n'est plus mentionné dans la documentation officielle. Donc, au lieu de créer une entité User qui etend la classe User de fosUser, il est préférable de passer par la commande [make:user] qui crée un utilisateur de base, puis ajouter les champs dont on a besoin via [make:entity User].
 
+### Autorisations via les guards:
+### Autorisations via les voters:
 
 
 ## Architecture (3.4):
