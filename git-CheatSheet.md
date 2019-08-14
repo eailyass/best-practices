@@ -1,30 +1,28 @@
 ## Gestion de la config de base:
-git config --global -l => liste la config
-
-git config --global user.name "username" => définir l'utilisateur.
-
-git config --global core.editor code|subl... => définir l'éditeur de texte par défaut.
+* git config --global -l => liste la config
+* git config --global user.name "username" => définir l'utilisateur.
+* git config --global core.editor code|subl... => définir l'éditeur de texte par défaut.
 
 ## Commandes de logs:
 
-git log ==> tous les commits
-git log --oneline ==> les commits sur 1 seule ligne
-git log -n ==> les n derniers commits
-git log -p filename ==> les commits sur un seul fichier
+* git log ==> tous les commits
+* git log --oneline ==> les commits sur 1 seule ligne
+* git log -n ==> les n derniers commits
+* git log -p filename ==> les commits sur un seul fichier
 
 ## Commande checkout:
 
-git checkout "commitId" ==> retour dans le commit en question pour visualiser. aucune modif n'est prise en charge dans le master head
-git checkout "commitId" "fileName" ==> Modifier un fichier dans un commit particulier avec prise en charge dans le master head
+* git checkout "commitId" ==> retour dans le commit en question pour visualiser. aucune modif n'est prise en charge dans le master head
+* git checkout "commitId" "fileName" ==> Modifier un fichier dans un commit particulier avec prise en charge dans le master head
 
 ## Commande revert:
 
-git revert "commitId" ==> annuler le commit en question
-git revert "commitId" "fileName" ==> annuler le commit dans un fichier particulier
+* git revert "commitId" ==> annuler le commit en question
+* git revert "commitId" "fileName" ==> annuler le commit dans un fichier particulier
 
 ## Commande reset:
 
-- Permet de _supprimer les commits.
+- Permet de supprimer les commits.
   - git reset "commitId" [--mixed] ==> supprimer les commits après le "commitId", garde les modifs sur les fichiers sans les stagger.
   - git reset "commitId" --soft ==> supprimer les commits après le "commitId" mais garde les changements apportés aux fichiers un nouveau commit permet de persister
   - git reset "commitId" --hard ==> supprimer les commits après le "commitId" et efface les modifications sur tous les fichers modifiés après les commitId  
