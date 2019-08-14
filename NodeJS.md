@@ -2,6 +2,13 @@ module.exports.say=
 
 debug filename.js
 
+## Initialiser un projet
+
+Permet de créer le fichier package.json dans le dossier en cours qui va permettre de gérer les dépendances par la suite.
+```bash
+npm init
+```
+
 
 ## appeler un module
 

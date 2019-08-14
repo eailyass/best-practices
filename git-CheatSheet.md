@@ -1,7 +1,10 @@
 ## Gestion de la config de base:
 git config --global -l => liste la config
+
 git config --global user.name "username" => définir l'utilisateur.
+
 git config --global core.editor code|subl... => définir l'éditeur de texte par défaut.
+
 ## Commandes de logs:
 
 git log ==> tous les commits
