@@ -2,10 +2,64 @@
 ----
 React est une _bibliothèque JS_ développée par Facebook, qui permet de générer des applications web à base de JS suivant la norme `ES6`, du `CSS` en plus de la génération du `HTML` via la norme `JSX`
 ### Prérequis:
-Avant tout démarrage il est nécessaire d'installer npm et react-install
+* Avant tout démarrage il est nécessaire d'installer npm et react-install
+* Initialiser un projet avec `npm init` qui permet de génerer un fichier package.json qui gère les dépendances du projet.
+* Créer un projet via la commande create-react-app [nom_du_projet]
 
+### Structure d'un projet:
+#### Dossier public:
+Contient in fichier index.html avec une balise principale. L'application est en général de type SPA (single page app), donc on garde notre page index.html et c'est le js qui va venir changer le contenu de cette page.
 
+#### Dossier node_modules:
+C'est le dossier ou on trouve tous les modules installés par npm.
 
+#### Dossier src:
+Contient la logique de l'application, avec deux fichiers principaux en plus du css qui accompagne:
+* index.js à partir duqeul on va viser notre public/index.html
+* app.js qui est un component react.
 
+Ce dossier peut contenir tous ce qui va nous aider à organiser la logique de l'application comme:
 
-En JSX il faut que tout le code soit enveloppée d'une seule balise
+* components: dossier qui rassemble les composants développés
+* styles: regroupe tous le fichier des styles (index.css...)
+* containers: des composantes qui contiennet d'autre composantes (le fichier app.js par expl)
+* helper: librairie personnelle de fonctions developpées.
+
+#### Principe général:
+Un projet est constitué de plusieurs composants (fichier js avec du JSX éventuellement + fichier css pour le style). Plusieurs composants peuvent être regroupés dans un container, et le tout est appelé dans un fichier central (app.js) selon différentes règles.
+
+### Les spécificités react:
+
+#### Un composant:
+C'est un fichier js qui importe forcément la biblio react via `import React from 'react'` et eventuellement un fichier de style. Et déclare une fonction qui retourne du `JSX` et se termine par un `export default nomDeFonction`. Il esxiste en deux type, stateless et statefull.
+##### Composant stateless
+Implémente et retourne une méthode et importe `React`
+##### Composant stateful
+Implémente une classe qui étend la classe `Component` et qui retourne du JSX via la méthode `render()` et importe `React` et `Component` de la biblio `react`
+##### Principe des props:
+Pour garantir la réutilisabilité du component la fonction accepte des variables qu'in appelle `props` selon la syntaxe suivante:
+```javascript
+const functionName = props => (
+	<div>
+		<div className="nom de la classe">
+			props.propriete_1
+		<``/div>
+		<div className="nom de la classe">
+			props.propriete_2
+		<``/div>
+	<``/div>
+	);
+```
+Après on importe le composant dans le fichier central et on spécifie pour chaque props le valeur à attribuer.
+
+#### Un container:
+C'est un fichier js qui a la même structure d'un composant avec une propriété `children`.
+```javascript
+const functionName = props => (
+	<div>
+		{props.children}
+	<``/div>
+	);
+```
+#### Le lifecycle d'un composant:
+Un composant a un lifecycle de plusieurs étapes qu'on peut appeler pour executer des étapes avanat ou après l'import du composant.

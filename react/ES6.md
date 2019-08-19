@@ -52,8 +52,8 @@ const {color} = test; //Equivalent à const {details : {color}} = test; à évit
 Les fonctions sont déclarées différement:
 ES5:
 ```Javascript
-var maFonction = function maFonction() {
-  return 50;
+var maFonction = function maFonction({val1,val2='default'}) {
+  return {val1};
 };
 ```
 ES6:
@@ -134,4 +134,28 @@ const obj2 = {...obj1} // obj2 aura les mêmes valeurs que obj1
 
 const tab1 = ['valer1','valeur2']
 const tab2 = [...tab1]
+```
+
+## Les Boucles:
+ES6 propose une syntaxr rapide de la boucle for
+
+----
+## Normes JSX:
+`JSX` est un language qui permet d'écrire du pseudo-html dans des fichiers JS qui vont générer de l'html coté client par la suite. Il répond à certaines règles:
+* En JSX il faut que tout le code soit enveloppée d'une seule balise. Il faut tjrs penser à créer une div qui regroupe le code.
+* l'équivalent de l'attribut `class` dans html est `className` et celui de `for` est `htmlFor`
+* Les props en JSX acceptent deux types de valeurs, des string et `les autres`. A noter que les autres peut être n'importe quelle valeur, à condition d'être enveloppé entre deux accolades. Quant aux valeurs booléennes, il est à noté que le simple fait de déclarer une prop sans lui affecter une valeur est équivalent à un `true` On retrouve une syntaxe telle que:
+```javascript
+<attributeName
+	prop1="string"
+	prop2= {autre}
+	required 
+{/*required est true*/} 
+	/>
+```
+
+### Les conditions:
+Les conditions et boucles n'éxistent pas dans JSX au vrai sens du terme. Elles sont illustrées sous forme d'opérateurs logiques `&&` `||` et opérateur trnaire `? :` ainsi pour executer un code selon une condition, on procède à la syntaxe suivante:
+```javascript
+{condition === true && ('code à éxecuter')}
 ```
