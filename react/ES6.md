@@ -137,7 +137,12 @@ const tab2 = [...tab1]
 ```
 
 ## Les Boucles:
-ES6 propose une syntaxr rapide de la boucle for
+ES6 propose une syntaxe rapide de la boucle for, qui est la suivante:
+```javascript
+for (item of items){
+	
+}
+```
 
 ----
 ## Normes JSX:

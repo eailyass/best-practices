@@ -63,3 +63,39 @@ const functionName = props => (
 ```
 #### Le lifecycle d'un composant:
 Un composant a un lifecycle de plusieurs étapes qu'on peut appeler pour executer des étapes avanat ou après l'import du composant.
+
+#### Principe des données desendantes:
+Dans react on trouve la notion de composant parent et composants fils. En effet, tout composant qui emet la fonction `render` est un parent des composants invoqués par cette même fonction. Ainsi deux régles émanent de cette notion:
+* Une `prop` est toujours passée par un composant parent vers un enfant.
+* Toute prop passée est en lecture seule.
+
+#### Les propTypes:
+Le fait que nos composants disposent de props, implique que lors de l'appel de ces composants, les props doivent être définis ou à la rigeur aient une valeur par défaut. Cette valeur par défaut est renseignée par la propriété `defaultProps` de la manière suivante:
+```javascript
+function MyCoolComponent({ name, required, value }) {
+  // …
+}
+
+MyCoolComponent.defaultProps = {
+  name: "test",
+  required: false,
+}
+```
+Cette façon de faire a quelques inconvénients comme dans le cas où on ne définit pas les valeurs par défaut de toutes les variables. Chose qui emet une érreur dans le cas d'ommission d'une valeur. Pour cela une deuxième alternative se présente, à savoir les propTypes. Elles sont gérés par l'import du module `prop-types`, et permettent de définir le type de chaque prop ainsi que si elle est `required` ou pas...
+Sa mise en oeuve peut se faire de la manière suivante:
+```javascript
+import PropTypes from 'prop-types'
+
+// La fonction Card ici…
+
+Card.propTypes = {
+  card: PropTypes.string.isRequired,
+  feedback: PropTypes.oneOf([
+    'hidden',
+    'justMatched',
+    'justMismatched',
+    'visible',
+  ]).isRequired,
+  onClick: PropTypes.func.isRequired,
+}
+```
