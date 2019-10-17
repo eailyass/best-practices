@@ -32,9 +32,9 @@ Un projet est constitué de plusieurs composants (fichier js avec du JSX éventu
 
 #### Un composant:
 C'est un fichier js qui importe forcément la biblio react via `import React from 'react'` et eventuellement un fichier de style. Et déclare une fonction qui retourne du `JSX` et se termine par un `export default nomDeFonction`. Il esxiste en deux type, stateless et statefull.
-##### Composant stateless
+##### Composant stateless:
 Implémente et retourne une méthode et importe `React`
-##### Composant stateful
+##### Composant stateful:
 Implémente une classe qui étend la classe `Component` et qui retourne du JSX via la méthode `render()` et importe `React` et `Component` de la biblio `react`
 ##### Principe des props:
 Pour garantir la réutilisabilité du component la fonction accepte des variables qu'in appelle `props` selon la syntaxe suivante:
@@ -81,7 +81,7 @@ MyCoolComponent.defaultProps = {
   required: false,
 }
 ```
-Cette façon de faire a quelques inconvénients comme dans le cas où on ne définit pas les valeurs par défaut de toutes les variables. Chose qui emet une érreur dans le cas d'ommission d'une valeur. Pour cela une deuxième alternative se présente, à savoir les propTypes. Elles sont gérés par l'import du module `prop-types`, et permettent de définir le type de chaque prop ainsi que si elle est `required` ou pas...
+Cette façon de faire a quelques inconvénients comme dans le cas où on ne définit pas les valeurs par défaut de toutes les variables. Chose qui emet une érreur dans le cas d'ommission d'une valeur. Pour cela une deuxième alternative se présente, à savoir les propTypes. Elles sont gérées par l'import du module `prop-types`, et permettent de définir le type de chaque prop ainsi que si elle est `required` ou pas...
 Sa mise en oeuve peut se faire de la manière suivante:
 ```javascript
 import PropTypes from 'prop-types'
@@ -99,3 +99,22 @@ Card.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 ```
+
+### Spécificités des classes:
+Une classe est utilisée lorsqu'on doit déclaer des fonctions métier. Elle contient plusieurs spécificités dont on cite:
+#### La notion `this`:
+En général, faire appel à `this` dans une classe signifie qu'on est en train de viser l'instance même dont on est à l'interieur.
+##### Binding explicite:
+##### Binding par fonction fléchée:
+##### Binding par decorator:
+### La notion de l'état local:
+
+
+
+
+Routes : app.js
+
+
+## Rducer /reducers
+## 
+## Thunk

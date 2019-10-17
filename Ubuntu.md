@@ -31,3 +31,21 @@ Par la suite on boot normalement puis il on retrouve l'espace étendu si on util
 **Etendre le volume logique**: sudo lvextend -L +20G path/du/LV (ajoute 20 Go au LV)
 
 **Redimentionner le volume**: sudo resize2fs path/du/LV
+
+## Manipuler SSH:
+### Se connecter via SSH:
+### Transfert de fichiers via SSH:
+## Manipuler tar et gzip:
+
+## Gestion des utilisateurs:
+
+**Afficher les utilisateurs:** users
+
+**ajouter des utilisateurs:** sudo adduser 'username'
+
+**ajouter un utilisateur à un groupe:** sudo adduser 'username' 'groupname' (permet d'ajouter un user au group root pour des droits sudo)
+
+**Modifier un mot de passe**: sudo passwd 'username'
+
+**Supprimer un utilisateur:** sudo deluser 'username'
+### 
