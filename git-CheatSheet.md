@@ -3,6 +3,11 @@
 * git config --global user.name "username" => définir l'utilisateur.
 * git config --global core.editor code|subl... => définir l'éditeur de texte par défaut.
 
+### Gestion des accès sur linux:
+* git config --global credential.helper.store puis git pull => enregistrer l'id et mdp
+* si les eaccès changent, la communication avec le serveur va échouer et git va redemander les nouveaux accès
+
+
 ## Commandes de logs:
 
 * git log ==> tous les commits
