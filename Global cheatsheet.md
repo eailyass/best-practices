@@ -21,8 +21,8 @@
 
 ## Doctrine:
 	Generate database : doctrine:create:database
-	créer entité: make:entity
-	créer migration: make:migration
-	montre ce qui va changer dans la bdd: doctrine:migrations:migrate --write-sql
-	effectuer la migration: doctrine:migrations:migrate
-	
+	Créer entité: make:entity
+	Créer migration: make:migration
+	Montre ce qui va changer dans la bdd: doctrine:migrations:migrate --write-sql
+	Effectuer la migration: doctrine:migrations:migrate
+	Annuler une migration (le fichier Version1254586558 par expl): doctrine:migration:execute --down 1254586558
