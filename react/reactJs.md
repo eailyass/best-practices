@@ -114,6 +114,7 @@ En général, faire appel à `this` dans une classe signifie qu'on est en train 
 
 Routes : app.js
 
+Les states remontent, les props redescendent.
 
 ## Rducer /reducers
 ## 

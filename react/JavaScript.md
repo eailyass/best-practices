@@ -39,3 +39,7 @@ Pour retourner un tableau d'éléments il faut utiliser la méthode ``querySelec
 * __AddEventListener('event', function())__ : S'applique sur un élément, document, window mais aussi sur tout objet prenant en charge les évènements (comme XMLHttpRequest).
 * __preventDefault()__ permet d'annuler le comportement par défaut de l'élément.
 * Les événements se propagent dans le DOM du fils en parent, (un click dans sur une div se propage sur les différentes balises parentes). Il est possible d'utiliser __stopPropagation()__ pour éviter ce comportement.
+
+#### Quelques événements:
+* `change` : écoute le changement des champs éléments comme les champs text et cases à cocher.
+* `mousmove`: Ecoute les mouvements du curseur et retourne ses coordonnées par rapport au DOM, fenêtre, un élément...
