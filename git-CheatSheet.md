@@ -51,7 +51,10 @@ Permet d'intègrer les modifications de la branche mère dans celles d'une branc
 - git push origin master => pusher les modifications du merge vers le serveur.
 
 ## Gestion des conflits:
-- Une fois deux développeurs travaillent en local sur le même fichier en même temps (même branche ou branches différents) - un conflit est créé lors du push, il faut le régler manuellement dans le fichier.
+- Une fois deux développeurs travaillent en local sur le même fichier en même temps (même branche ou branches différents) - un conflit est créé lors du pull, il faut le régler manuellement dans le fichier.
+
+### La commande blame
+- git blame "fileName.ext" ==> Des fois, on a besoin de savoir qui a modifié un fichier, on peut passer par cette commande qui nous liste toutes les modifs avec le nom d'utilisateur à côté
 
 ## Gestion d'un nouveau projet:
 Un projet est géré selon plusieurs cas de figure
