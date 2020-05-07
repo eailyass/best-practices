@@ -19,7 +19,7 @@
 Permet un retour sur un commit pour visualiser:
 
 * git checkout "commitId" ==> retour dans le commit en question pour visualiser. aucune modif n'est prise en charge dans le master head
-* git checkout "commitId" "fileName" ==> Modifier un fichier dans un commit particulier avec prise en charge dans le master head
+* git checkout "commitId" "fileName" ==> Modifier un fichier dans un commit particulier avec prise en charge dans le master head *permet aussi de récupérer un fichier récemment supprimé* 
 
 ## Commande revert:
 Permet d'annuler un commit:

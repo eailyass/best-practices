@@ -21,6 +21,7 @@ swap est une zone d'un disque dur faisant partie de la mémoire virtuelle. Il es
 
 **Afficher les différentes partitions**: sudo fdisk -l [Lister les partitions] /dev/sda [modifier la partition] Comme on peut utiliser df -h
 **Formater une partition**: sudo mkfs [type de file system ex: ext4] [nom de la partition /dev/sdXX]
+
 ### Etendre/Créer une partition:
 Pour étendre ou créer un partition il faut télécharger une iso de l'outil "gparted" puis booter via cette iso. Un outil graphique permet d'effectuer le nécessaire.
 
@@ -48,4 +49,18 @@ Par la suite on boot normalement puis il on retrouve l'espace étendu si on util
 **Modifier un mot de passe**: sudo passwd 'username'
 
 **Supprimer un utilisateur:** sudo deluser 'username'
-### 
+
+## Gestion des packets:
+
+Les packets servent pour assurer la mise à jour du système. Ils sont régulièrement téléchargés et mis à jour depuis les serveurs ubuntu. L'installation de ses packets se fait via `apt` ou `apt-get` et même avec `dpkg`.
+Les liens vers les packets sont enregistrés dans le fichier `sources.list` qui se trouve dans le dossier `/etc/apt/`
+
+### La gestion par apt / apt-get:
+
+* apt-get update : permet de mettre à jour le chache des sources.
+
+* apt-get upgrade: permet de mettre à jour toutes les applications du système.
+
+* apt-get install/remove <nom_de_packet>: permet d'installer/supprimer un packet spécifique.
+
+* apt-get -y install <nom_de_packet>: permet de répondre automatiquement par 'oui' sur toutes les interaction pouvant intervenir lors de l'installation (utile pour automatiser les install sans intervention de l'user).
