@@ -16,6 +16,20 @@ composer req api-platform/core  Ou composer req api-platform/api-pack
 - Ces deux annotations sont complétement séparées.
 - Ces annotations permettent aussi de surcharger les routes par défaut itemsOperations={"get"={"methode"="GET", "path"="/our/customized/path", "requirements" = ""...}}
 
+### Interface de description:
+C'est une interface incluse dans api-platform qui nous permet d'explorer notre api. Elle respecte les normes OpenAPI et permet d'effectuer des taches crud sur notre bdd.
+
+ - Si on a besoin d'y effectuer une requête post, il suffit d'envoyer notre objet json dans le champ dédié.
+ - Si notre objet Foo comporte une relation avec un objet Bar, il faut spécifier `l'IRI` de ce dernier dans le json:
+  ```json
+    {
+      "attribut1":"valeurString",
+      "attribut2":"valeurString",
+      "attribut3":204,
+      "attribut-relation":"/api/Bars/<id>",
+    }
+  ```
+
 ## 2. Opérations sur les ressources:
 ### a. Appliquer un tri par défaut:
 Ajouter l'annotation attributes->Order dans @ApiRessource(

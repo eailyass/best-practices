@@ -1,5 +1,13 @@
 # Astuces Ubuntu:
 -----
+
+## Anatomie et gestion de fichiers:
+### Anatomie ubuntu:
+### Gestion des fichiers:
+
+**Recherche**:
+* locate <'chemin de recherche'> -name <nom> -type d(pour directory)/f(pour file)
+
 ## Gestion de la mémoire:
 
 **Afficher l'état de mémoire**: free -m
@@ -64,3 +72,8 @@ Les liens vers les packets sont enregistrés dans le fichier `sources.list` qui 
 * apt-get install/remove <nom_de_packet>: permet d'installer/supprimer un packet spécifique.
 
 * apt-get -y install <nom_de_packet>: permet de répondre automatiquement par 'oui' sur toutes les interaction pouvant intervenir lors de l'installation (utile pour automatiser les install sans intervention de l'user).
+
+## La commande curl:
+C'est à la fois une bibliothèque et une cli, qui permet de créer des requêtes en plusieurs protocoles dont http et ftp. La commande de base est `curl www.example.com`
+**Télécharger un fichier:** `curl www.example.com/path-to-file`
+**Télécharger et changer le nom:** `curl -o <fileName1> www.example.com/path-to-file`

@@ -118,7 +118,10 @@ Finalement, il faut l'injecter dans le constructeur de la classe où on veut l'u
 
 ## HTTP et les observables:
 ### Observables:
+
 	RxJs= Reactive Extensions Library
+	* of(...items) : retourne des observables depuis les arguments fournis
+	* from(iterable): pour convertir un tableau en observable
 
 ## Le routage:
 Se déclarent dans app.module.ts ou dans un fichier séparé de routing
@@ -137,3 +140,7 @@ import CanActivate
 @Injectable : decorateur au dessus du nom de la classe car le service est injectable
 canActivate(): décrit la logique d'authentification
 Ajouter à 
+
+## Les Formulaires:
+Il y a deux approches pour les forms, **les reactive forms** et **les template-driven forms**
+### Les reactive forms:
