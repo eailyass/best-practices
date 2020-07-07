@@ -144,3 +144,15 @@ Ajouter à
 ## Les Formulaires:
 Il y a deux approches pour les forms, **les reactive forms** et **les template-driven forms**
 ### Les reactive forms:
+
+
+## Communications HTTP:
+
+Pour faire des communications http il faut importer le `HttpClientModule` depuis `@angular/common/http` dans `AppModule` puis injecter le service `HttpClient` dans le component ou service qui va effectuer la communication.
+
+* get(): permet de faire des requetes http pour récuperer des données.
+* post(), put(), patch() : permet d'envoyer les données au serveur.
+* delete() : permet de supprimer une ressource sur le serveur.
+
+
+#ref

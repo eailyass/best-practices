@@ -29,10 +29,11 @@ Permet d'annuler un commit:
 
 ## Commande reset:
 
-Permet de supprimer les commits.
+Permet de supprimer les commits. Ou encore de forcer le "head" à se mettre sur un commit spécifique
   - git reset "commitId" [--mixed] ==> supprimer les commits après le "commitId", garde les modifs sur les fichiers sans les stagger.
   - git reset "commitId" --soft ==> supprimer les commits après le "commitId" mais garde les changements apportés aux fichiers un nouveau commit permet de persister
-  - git reset "commitId" --hard ==> supprimer les commits après le "commitId" et efface les modifications sur tous les fichers modifiés après les commitId  
+  - git reset "commitId" --hard ==> supprimer les commits après le "commitId" et efface les modifications sur tous les fichers modifiés après les commitId
+  - git reset --hard "branch_name" ==> force la branche à adopter le même historique de commits que "branch_name" est utile si on veut absolument faire ressembler notre branche à "branche_name" (mieux qu'un pull --force)
 
 ## Commande rebase:
 Permet d'intègrer les modifications de la branche mère dans celles d'une branche `feature` sans écraser les commit de cette dernière. C'est une sorte de mixage entre les modifications des deux branches.
@@ -58,3 +59,7 @@ Permet d'intègrer les modifications de la branche mère dans celles d'une branc
 
 ## Gestion d'un nouveau projet:
 Un projet est géré selon plusieurs cas de figure
+
+##Modifier un commit:
+### Modifier le dernier commit:
+- git commit --amend: Si on a fait un commit puis on s'est souvenu qu'il fallait modifier le message et/ou les fichiers qu'on a "commit". Un éditeur s'ouvre avec le message du commit qu'on peut modifier, et si on a "add" de nouveaux fichier ils seront ajoutés au commit.

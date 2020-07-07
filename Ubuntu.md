@@ -6,7 +6,7 @@
 ### Gestion des fichiers:
 
 **Recherche**:
-* locate <'chemin de recherche'> -name <nom> -type d(pour directory)/f(pour file)
+* find <'chemin de recherche'> -name <nom> -type d(pour directory)/f(pour file)
 
 ## Gestion de la mémoire:
 
@@ -64,6 +64,7 @@ Les packets servent pour assurer la mise à jour du système. Ils sont réguliè
 Les liens vers les packets sont enregistrés dans le fichier `sources.list` qui se trouve dans le dossier `/etc/apt/`
 
 ### La gestion par apt / apt-get:
+apt ou apt-get est le gestionnaire de packets sur ubuntu il permet plusieurs fonctionnalités, les deux commandes sont quasi similaires avec quelques différences comme la prise en charge des regex avec apt-get. C'est à dire `apt-get install php*` permet d'installer tous les packets qui commencent par php tandis que avec apt ça ne fonctionne pas.
 
 * apt-get update : permet de mettre à jour le chache des sources.
 
@@ -72,6 +73,12 @@ Les liens vers les packets sont enregistrés dans le fichier `sources.list` qui 
 * apt-get install/remove <nom_de_packet>: permet d'installer/supprimer un packet spécifique.
 
 * apt-get -y install <nom_de_packet>: permet de répondre automatiquement par 'oui' sur toutes les interaction pouvant intervenir lors de l'installation (utile pour automatiser les install sans intervention de l'user).
+
+#### apt-mark:
+
+Cette commande permet de gérer les packets à mettre à jour ou non de manière manuelle. Si on veut qu'un packet ne se mette pas a jour lors du `apt-upgrade` on utilise cette commande:
+* apt-mark hold <nom_du_packet> : ignorer la maj de ce packet.
+* apt-mark showhold : afficher tous les packets dont la maj est ignorée.
 
 ## La commande curl:
 C'est à la fois une bibliothèque et une cli, qui permet de créer des requêtes en plusieurs protocoles dont http et ftp. La commande de base est `curl www.example.com`
