@@ -84,3 +84,18 @@ Cette commande permet de gérer les packets à mettre à jour ou non de manière
 C'est à la fois une bibliothèque et une cli, qui permet de créer des requêtes en plusieurs protocoles dont http et ftp. La commande de base est `curl www.example.com`
 **Télécharger un fichier:** `curl www.example.com/path-to-file`
 **Télécharger et changer le nom:** `curl -o <fileName1> www.example.com/path-to-file`
+
+## Commandes particulières:
+
+Quelques commandes pour quelque gestions particulières
+
+### Basculer entre versions PHP:
+
+	sudo a2dismod php7.x
+	sudo a2enmod php7.x
+	[sudo update-alternatives --set php /usr/bin/php7.x]
+	[sudo update-alternatives --set phar /usr/bin/phar7.x]
+	[sudo update-alternatives --set phar.phar /usr/bin/phar.phar7.x]
+	[sudo update-alternatives --set phpize /usr/bin/phpize7.x]
+	[sudo update-alternatives --set php-config /usr/bin/php-config7.x]
+	sudo systemctl restart apache2
