@@ -7,6 +7,12 @@
 * git config --global credential.helper.store puis git pull => enregistrer l'id et mdp
 * si les eaccès changent, la communication avec le serveur va échouer et git va redemander les nouveaux accès
 
+## Gestion des repos:
+* git remote -v ==> permet de voir les liens de repos distants.
+
+### Modification d'un repo distant:
+Dans le cas ou le serveur distant est migré par exemple!
+git remote set-url "nom distant (origin)" "nouveau lien (le même utilisé dans git clone)"
 
 ## Commandes de logs:
 
@@ -40,6 +46,13 @@ Permet d'intègrer les modifications de la branche mère dans celles d'une branc
   - git checkout `feature`  git rebase `master` => se positionner sur la branche et faire un rebase sur la branche principale.
   - S'il y a des confilts il faut les traiter manuellement puis faire git rebase --continue
 
+## Commande restore:
+
+ permet d'annuler les modifications sur un fichier
+
+ - git restore "fichier" => annule les modification sur un fichier (eq à git checkout "fichier")
+- git restore --staged "path" => pour désindexer un path ajouté à l'index avec un git add (annule l'effet du git add sur un path)
+
 ## Gestion des branches:
 
 - git branch "branch_name" ==> permet de créer une nouvelle branche.
@@ -61,5 +74,6 @@ Permet d'intègrer les modifications de la branche mère dans celles d'une branc
 Un projet est géré selon plusieurs cas de figure
 
 ##Modifier un commit:
+
 ### Modifier le dernier commit:
 - git commit --amend: Si on a fait un commit puis on s'est souvenu qu'il fallait modifier le message et/ou les fichiers qu'on a "commit". Un éditeur s'ouvre avec le message du commit qu'on peut modifier, et si on a "add" de nouveaux fichier ils seront ajoutés au commit.
