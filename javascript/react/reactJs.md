@@ -64,7 +64,7 @@ const functionName = props => (
 #### Le lifecycle d'un composant:
 Un composant a un lifecycle de plusieurs étapes qu'on peut appeler pour executer des étapes avanat ou après l'import du composant.
 
-#### Principe des données desendantes:
+#### Principe des données descendantes:
 Dans react on trouve la notion de composant parent et composants fils. En effet, tout composant qui emet la fonction `render` est un parent des composants invoqués par cette même fonction. Ainsi deux régles émanent de cette notion:
 * Une `prop` est toujours passée par un composant parent vers un enfant.
 * Toute prop passée est en lecture seule.

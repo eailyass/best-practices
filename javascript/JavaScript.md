@@ -43,3 +43,14 @@ Pour retourner un tableau d'éléments il faut utiliser la méthode ``querySelec
 #### Quelques événements:
 * `change` : écoute le changement des champs éléments comme les champs text et cases à cocher.
 * `mousmove`: Ecoute les mouvements du curseur et retourne ses coordonnées par rapport au DOM, fenêtre, un élément...
+
+# Les Versions JS:
+
+JS a coonu plusieurs versions depuis 1997 sous le nom ECMAScript. les versions les phares sont:
+
+## ES3 en (1999):
+
+Ajout des des regex, try/catch, do-while et switch.
+
+## ES5 (2009):
+Ajout du "strict mode", JSON (parse, stringify), iterations sur tableaux (foreach, map,filter), string sur plusieurs lignes via "\" ou "+"

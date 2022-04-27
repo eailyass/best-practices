@@ -31,7 +31,20 @@
 
 ### Commandes de base:
 
-psql -d 'database_name' -U 'username' -W : Se connecter à une bdd.
+* psql -d 'database_name' -U 'username' -W : Se connecter à une bdd.
+* \l : lister les bdd <=> SELECT datname FROM pg_database;
+* \c 'database_name' : switch vers une bdd.
+* \dt : afficher les tables.
+* Terminer les connexions à une bdd pour pouvoir la supprimer:
+	```sql
+		SELECT
+			pg_terminate_backend (pg_stat_activity.pid)
+		FROM
+			pg_stat_activity
+		WHERE
+			pg_stat_activity.datname = 'db_name';
+	```
+
 
 	Rattacher une sequence à l'ID d'une table
 ```sql
